@@ -277,4 +277,22 @@ if game.PlaceId == 17018663967 then
 			break
 		end
 	end
+	wait(1)
+	SpawmTroop(4, 400 , 340 )
+	while true do
+		wait(20)
+		ugradeUnit( 400 , 340 )
+		if btnUpgrade.Text == "Max" then
+			break
+		end
+	end
+	wait(1)
+	SpawmTroop(4, 400 , 303 )
+	while true do
+		wait(20)
+		ugradeUnit( 400 , 303 )
+		if btnUpgrade.Text == "Max" then
+			break
+		end
+	end
 end
