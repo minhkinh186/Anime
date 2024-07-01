@@ -34,7 +34,6 @@ function clickToaDo(x,y, object)
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NTDCONCUBETI/Duongcutobeti/main/ClosePeopeoAndChat"))()
-playerGui.TopBar.AbsoluteSize.Y = 36
 
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 	wait(3)
