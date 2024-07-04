@@ -34,6 +34,7 @@ function clickToaDo(x,y, object)
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NTDCONCUBETI/Duongcutobeti/main/ClosePeopeoAndChat"))()
+playerGui.TopBar.HolderFrame.Visible = false
 
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 	wait(3)
@@ -227,21 +228,21 @@ if game.PlaceId == 17018663967 then
 		end
 	end
 	for i =1 ,10 do
-		wait(5)
+		wait(8)
 		ugradeUnit( 358 , 377 )
 		if btnUpgrade.Text == "Max" then
 			break
 		end
 	end
 	for i =1 ,10 do
-		wait(5)
+		wait(8)
 		ugradeUnit( 358 , 414 )
 		if btnUpgrade.Text == "Max" then
 			break
 		end
 	end
 	for i =1 ,10 do
-		wait(5)
+		wait(8)
 		ugradeUnit( 400 , 414 )
 		if btnUpgrade.Text == "Max" then
 			break
