@@ -1,5 +1,6 @@
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NTDCONCUBETI/Duongcutobeti/main/FPSBOOTER"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NTDCONCUBETI/Duongcutobeti/main/LowMap"))()
 
 local player = game.Players.LocalPlayer
 local camera = workspace.CurrentCamera
