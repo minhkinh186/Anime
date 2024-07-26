@@ -62,9 +62,9 @@ if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 		tab(246,143) wait(2)--chọn bản đồ 1
 		tab(246,143) wait(2)--chọn bản đồ 1
 
-		for i = 0,6 do
-			tab(418,105 +i * 37 ) wait(1)--chọn map Cao nhat
-		end
+		--for i = 0,6 do
+			tab(418,105 + 6 * 37 ) wait(1)--chọn map Cao nhat
+		--end
 
 		tab(483,391) wait(2)---tab confim
 		tab(737,317) wait(3)---tab Star
