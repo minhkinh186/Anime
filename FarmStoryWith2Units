@@ -329,6 +329,17 @@ if game.PlaceId == 17018663967 then
 	wait(1)
 	SpawmTroopDacBiet(2, 766 , 122, 522 , 377 )
 	wait(1)
+	
+	local setting = playerGui.PAGES.SettingsUI
+	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
+	setting.Visible = true
+	wait(2)
+	if autoskip.Text == "Off" then 
+		click(autoskip)
+		wait(2)
+	end
+	setting.Visible = false
+	wait(1)
 	SpawmTroopDacBiet(2, 798 , 45, 564 , 303 )
 	wait(1)
 	SpawmTroopDacBiet(2, 393 , 108, 564 , 340  )
@@ -340,17 +351,6 @@ if game.PlaceId == 17018663967 then
 	cameraCFrame = CFrame.new(cameraPosition, lookAtPosition)
 	------Spam The Beast
 	SpawmTroop(3, 358 , 303 )
-	wait(1)
-	
-	local setting = playerGui.PAGES.SettingsUI
-	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
-	setting.Visible = true
-	wait(2)
-	if autoskip.Text == "Off" then 
-		click(autoskip)
-		wait(2)
-	end
-	setting.Visible = false
 	wait(1)
 	
 	SpawmTroop(3, 358 , 340 )
