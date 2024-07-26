@@ -130,7 +130,19 @@ playerGui.TopBar.HolderFrame.Visible = false
 
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 	wait(3)
-	--game:GetService("RunService"):Set3dRenderingEnabled(false)
+	local update = playerGui.PAGES.UpdatesUI
+	update.Visible = false
+	local setting = playerGui.PAGES.SettingsUI
+	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
+	setting.Visible = true
+	wait(2)
+	if autoskip.Text == "On" then 
+		click(autoskip)
+		wait(2)
+	end
+	setting.Visible = false
+	wait(1)
+	
 	local tableGateStory = {
 		{-182.67401123046875, 11.280637741088867, -281.1835632324219},
 		{-216.95391845703125, 11.280628204345703, -317.7225646972656},
@@ -154,7 +166,7 @@ if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 		tab(246,143) wait(2)--chọn bản đồ 1
 
 		--for i = 0,6 do
-			tab(418,105 + 6 * 37 ) wait(1)--chọn map Cao nhat
+		tab(418,105 + 6 * 37 ) wait(1)--chọn map Cao nhat
 		--end
 
 		tab(483,391) wait(2)---tab confim
@@ -167,12 +179,24 @@ if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 
 		wait(30)
 	end
-	
+
 	game:GetService("TeleportService"):Teleport(17017769292, player)
 
 end
 
 if game.PlaceId == 17018663967 then
+	
+	
+	local setting = playerGui.PAGES.SettingsUI
+	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
+	setting.Visible = true
+	wait(2)
+	if autoskip.Text == "Off" then 
+		click(autoskip)
+		wait(2)
+	end
+	setting.Visible = false
+	wait(1)
 
 	-- Thiết lập camera thành Scriptable để điều khiển bằng script
 	camera.CameraType = Enum.CameraType.Scriptable
@@ -253,7 +277,7 @@ if game.PlaceId == 17018663967 then
 			end
 		end)
 	end)
-	
+
 	local wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
 	spawn(function()
 		pcall(function()
