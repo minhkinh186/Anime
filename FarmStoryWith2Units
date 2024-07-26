@@ -186,18 +186,6 @@ end
 
 if game.PlaceId == 17018663967 then
 	
-	
-	local setting = playerGui.PAGES.SettingsUI
-	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
-	setting.Visible = true
-	wait(2)
-	if autoskip.Text == "Off" then 
-		click(autoskip)
-		wait(2)
-	end
-	setting.Visible = false
-	wait(1)
-
 	-- Thiết lập camera thành Scriptable để điều khiển bằng script
 	camera.CameraType = Enum.CameraType.Scriptable
 	-- Đặt vị trí và hướng của camera
@@ -313,16 +301,27 @@ if game.PlaceId == 17018663967 then
 
 	------Spam The Beast
 
-	SpawmTroop(3, 358 , 303 )
+	SpawmTroop(3, 400 , 414 )
 	wait(1)
+
+	local setting = playerGui.PAGES.SettingsUI
+	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
+	setting.Visible = true
+	wait(2)
+	if autoskip.Text == "Off" then 
+		click(autoskip)
+		wait(2)
+	end
+	setting.Visible = false
+	wait(1)
+
 	SpawmTroop(3, 358 , 340 )
 	wait(1)
 	SpawmTroop(3, 358 , 377 )
 	wait(1)
 	SpawmTroop(3, 358 , 414 )
 	wait(1)
-	SpawmTroop(3, 400 , 414 )
-	wait(2)
+	SpawmTroop(3, 358 , 303 )
 	wait(2)
 
 
