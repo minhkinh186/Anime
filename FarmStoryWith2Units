@@ -292,9 +292,10 @@ if game.PlaceId == 17018663967 then
 		end)
 	end)
 
-	local wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
+
 	spawn(function()
 		pcall(function()
+			local wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
 			while true do
 				wait(300)
 				if wave == playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text then
@@ -325,7 +326,7 @@ if game.PlaceId == 17018663967 then
 		end)
 	end)
 	
-	------Spam 6 Magic/Fire
+	------Spam 4 Magic/Fire
 	wait(1)
 	SpawmTroopDacBiet(2, 766 , 122, 522 , 377 )
 	wait(1)
@@ -346,9 +347,12 @@ if game.PlaceId == 17018663967 then
 	wait(1)
 	SpawmTroopDacBiet(2, 587 , 154, 564 , 377 )
 	
+	
+	
 	cameraPosition = Vector3.new(-1665.7144775390625, 60, -532.6212158203125) -- Vị trí của camera ở trên cao
 	lookAtPosition = Vector3.new(-1665.7144775390625, 0, -532.6212158203125) -- Vị trí mà camera sẽ nhìn vào
 	cameraCFrame = CFrame.new(cameraPosition, lookAtPosition)
+	
 	------Spam The Beast
 	SpawmTroop(3, 358 , 303 )
 	wait(1)
@@ -402,6 +406,22 @@ if game.PlaceId == 17018663967 then
 			break
 		end
 	end
+	
+	------------ Out wave 46
+	spawn(function()
+		pcall(function()
+			local wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
+			while true do
+				wait(10)
+				if wave == "46" then
+					---- Hiện bảng phần thưởng
+					local Match = playerGui.PAGES.MatchResultPage
+					Match.Visible = true
+				end
+				wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
+			end
+		end)
+	end)
 
 	----Spam Unit 4
 	wait(1)
