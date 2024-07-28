@@ -1,5 +1,5 @@
 
-setfpscap(15)
+setfpscap(7)
 UserSettings():GetService("UserGameSettings").MasterVolume = 0
 game:GetService("Lighting"):ClearAllChildren()
 
