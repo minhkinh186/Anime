@@ -128,7 +128,7 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NTDCONCUBETI/Duongcutobeti/main/ClosePeopeoAndChat"))()
 playerGui.TopBar.HolderFrame.Visible = false
 
-if game.PlaceId == 17764698696 then
+if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 	wait(3)
 	local update = playerGui.PAGES.UpdatesUI
 	update.Visible = false
@@ -142,7 +142,7 @@ if game.PlaceId == 17764698696 then
 	end
 	setting.Visible = false
 	wait(1)
-	
+
 	local tableGateStory = {
 		{-182.67401123046875, 11.280637741088867, -281.1835632324219},
 		{-216.95391845703125, 11.280628204345703, -317.7225646972656},
@@ -185,10 +185,6 @@ if game.PlaceId == 17764698696 then
 end
 
 if game.PlaceId == 17018663967 then
-	
-	
-	
-
 	-- Thiết lập camera thành Scriptable để điều khiển bằng script
 	camera.CameraType = Enum.CameraType.Scriptable
 	-- Đặt vị trí và hướng của camera
@@ -242,31 +238,6 @@ if game.PlaceId == 17018663967 then
 		end
 	end
 	
-	function SpawmTroopDacBiet (i,x,y,a,b)
-		while true do
-			camera.CFrame = cameraCFrame * rotation
-			wait(1)
-			click( tableUnit[i] )
-			wait(1)
-			tab( x , y )
-			wait(1)
-			presskey(119)
-			presskey(115)
-			wait(1)
-			presskey(101)
-			tab( a , b )
-			wait(1)
-			presskey(101)
-			tab( a , b )
-			if #game.Workspace.Units:GetChildren() > UnitsInWS then
-				UnitsInWS = #game.Workspace.Units:GetChildren()
-				break
-			end
-		end
-	end
-
-
-
 	function ugradeUnit(x,y)
 		camera.CFrame = cameraCFrame * rotation
 		wait(0.5)
@@ -325,12 +296,13 @@ if game.PlaceId == 17018663967 then
 			end
 		end)
 	end)
-	
+
 	------Spam 4 Magic/Fire
+
 	wait(1)
-	SpawmTroopDacBiet(2, 766 , 122, 522 , 377 )
+
+	SpawmTroop(3, 358 , 303 )
 	wait(1)
-	
 	local setting = playerGui.PAGES.SettingsUI
 	local autoskip = playerGui.PAGES.SettingsUI.ListFrame:WaitForChild("Settings Auto Skip Wave").Frame.BooleanButton.StatusLabel
 	setting.Visible = true
@@ -340,23 +312,14 @@ if game.PlaceId == 17018663967 then
 		wait(2)
 	end
 	setting.Visible = false
-	wait(1)
-	SpawmTroopDacBiet(2, 798 , 45, 564 , 303 )
-	wait(1)
-	SpawmTroopDacBiet(2, 393 , 108, 564 , 340  )
-	wait(1)
-	SpawmTroopDacBiet(2, 587 , 154, 564 , 377 )
-	
-	
-	
+
+
 	cameraPosition = Vector3.new(-1665.7144775390625, 60, -532.6212158203125) -- Vị trí của camera ở trên cao
 	lookAtPosition = Vector3.new(-1665.7144775390625, 0, -532.6212158203125) -- Vị trí mà camera sẽ nhìn vào
 	cameraCFrame = CFrame.new(cameraPosition, lookAtPosition)
-	
+
 	------Spam The Beast
-	SpawmTroop(3, 358 , 303 )
-	wait(1)
-	
+
 	SpawmTroop(3, 358 , 340 )
 	wait(1)
 	SpawmTroop(3, 358 , 377 )
@@ -365,19 +328,9 @@ if game.PlaceId == 17018663967 then
 	wait(1)
 	SpawmTroop(3, 400 , 414 )
 	wait(2)
-	wait(2)
 
 
 	------Update The Beat
-
-
-	for i =1 ,10 do
-		wait(5)
-		ugradeUnit( 358 , 303 )
-		if btnUpgrade.Text == "Max" then
-			break
-		end
-	end
 	for i =1 ,10 do
 		wait(5)
 		ugradeUnit( 358 , 340 )
@@ -406,7 +359,7 @@ if game.PlaceId == 17018663967 then
 			break
 		end
 	end
-	
+
 	------------ Out wave 46
 	spawn(function()
 		pcall(function()
