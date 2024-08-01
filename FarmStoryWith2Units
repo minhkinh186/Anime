@@ -268,7 +268,7 @@ if game.PlaceId == 17018663967 then
 		pcall(function()
 			local wave = playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text
 			while true do
-				wait(400)
+				wait(300)
 				if wave == playerGui.WaveTopBar.Wave.WaveFrame.TextLabel.Text then
 					-- về loppy
 					local TeleportService = game:GetService("TeleportService")
@@ -284,7 +284,7 @@ if game.PlaceId == 17018663967 then
 	spawn(function()
 		pcall(function()
 			while true do wait(30)
-				if tick() - startTime  > 60  then
+				if tick() - startTime  > 100  then
 					if UnitsInWS == 0 then
 						local TeleportService = game:GetService("TeleportService")
 						local placeId = 17017769292
